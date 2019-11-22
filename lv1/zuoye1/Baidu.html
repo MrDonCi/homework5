@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-type" content="text/html" charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>第三个网页</title>
+    <style type="text/css">
+        .a1 {
+            color: rgb(70, 68, 68);
+            font-size: 13px;
+            font-weight: bold;
+            margin-left: 19px
+        }
+        
+        u {
+            margin-left: 2px
+        }
+        
+        .box {
+            text-align: center;
+            margin-top: 400px;
+        }
+        
+        p {
+            color: gray;
+            font-size: 13px;
+            line-height: 8px;
+        }
+    </style>
+    <script type="text/javascript">
+        var Arraycolor = new Array("white", "red", "navy", "black", "green", "purple", "yellow", "white");
+        var Arrayfontcolor = new Array("black", "green", "orange", "white", "red", "yellow", "purple", "black");
+        var Arrayfont = new Array("14px", "12px", "16px", "20px", "14px");
+        var n = 0,
+            m = 0,
+            o = 0;
+        var a = Arraycolor.length;
+        var b = Arrayfont.length;
+
+        function handleclick() {
+            if (n === a - 1) {
+                n = 0;
+            }
+            ++n;
+            if (o === a - 1) {
+                o = 0;
+            }
+            ++o
+            document.bgColor = Arraycolor[n];
+            let fc = document.getElementsByTagName('a');
+            for (let j = 0; j <= fc.length; j++) {
+                fc[j].style.color = Arrayfontcolor[o]
+            }
+
+        }
+
+        function Handleclick() {
+            if (m === b - 1) {
+                m = 0;
+            }
+            ++m;
+            let c = document.getElementsByTagName('a');
+            for (let i = 0; i <= c.length; i++) {
+                c[i].style.fontSize = Arrayfont[m];
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div style="float: right;">
+        <a href="http://news.baidu.com/" class="a1">新闻</a>
+        <a href="https://www.hao123.com/" class="a1">hao123</a>
+        <a href="https://map.baidu.com/@11585280.82,3555907.48,12z" class="a1">地图</a>
+        <a href="http://v.baidu.com/" class="a1">视频</a>
+        <a href="https://tieba.baidu.com/index.html" class="a1">贴吧</a>
+        <a href="http://xueshu.baidu.com/" class="a1">学术</a>
+    </div>
+    <div style="text-align: left">
+        <a href="https://www.baidu.com/s?tn=baidutop10&rsv_idx=2&wd=%E9%87%8D%E5%BA%86%E5%A4%A9%E6%B0%94%E9%A2%84%E6%8A%A5" class="a1">重庆</a>
+        <a href="https://www.baidu.com/s?tn=baidutop10&rsv_idx=2&wd=%E9%87%8D%E5%BA%86%E5%A4%A9%E6%B0%94%E9%A2%84%E6%8A%A5" class="a1">***</a>
+        <a href="https://www.baidu.com/s?tn=baidutop10&rsv_idx=2&wd=%E9%87%8D%E5%BA%86%E5%A4%A9%E6%B0%94%E9%A2%84%E6%8A%A5" class="a1">优</a>
+    </div>
+    <form style="float: right;">
+        <input type="button" value="更换彩色主题" id="button" onclick="handleclick()">
+        <input type="button" value="更换字体大小" id="Button" onclick="Handleclick()">
+    </form>
+    <div style="text-align: center;margin-top: 100px">
+        <a href="https://www.baidu.com/s?wd=%e6%96%b0%e4%b8%ad%e5%9b%bd%e6%88%90%e7%ab%8b70%e5%91%a8%e5%b9%b4&sa=ire_dl_gh_logo&rsv_dl=igh_logo_pc" target="_blank">
+            <img src="xinshouyedong_4f93b2577f07c164ae8efa0412dd6808.gif" alt="新中国成立七十周年" width="270px" height="129px" />
+        </a>
+    </div>
+    <div style="text-align: center">
+        <input type="text" name="百度一下" style="width: 500px; height: 33px; border: 1px solid rgb(87, 154, 255)" />
+        <input type="submit" value="百度一下" name="点击以搜索" style="width: 110px; height:37px; background-color: rgb(87, 154, 255); font-size: 16px; color: white; margin-left: -6px" />
+    </div>
+    <div class="box">
+        <p><u>设为首页</u>@2019 baidu<u>使用百度前必读</u><u>意见反馈</u>>京ICP证030173号</p>
+        <p>京公网安备11000002000001号</p>
+    </div>
+</body>
+
+</html>
